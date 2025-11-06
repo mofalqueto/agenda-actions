@@ -1,1 +1,17 @@
-Release Worflow Agenda
+name: Release Workflow Agenda
+
+on:
+  push:
+    tags:
+      - v1.0.0
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repositório
+        uses: actions/checkout@v3
+
+      - name: Exibir mensagem de release
+        run: echo "Versão inicial automatizada"
